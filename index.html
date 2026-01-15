@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Expert Murfy</title>
+  <style>
+    /* On force la page à prendre toute la place disponible dans Notion */
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      width: 100%; 
+      height: 100%; 
+      background-color: white; 
+    }
+    /* On centre le contenu */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    /* On s'assure que l'input est bien visible et large */
+    #searchWidgetTrigger {
+      width: 80%;
+      max-width: 600px;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input type="text" id="searchWidgetTrigger" placeholder="Posez votre question technique ici..." readonly>
+  </div>
+
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=fr"></script>
+
+  <gen-search-widget
+    configId="1c720147-143d-4e3a-9e9c-4887bb14d2d7"
+    triggerId="searchWidgetTrigger">
+  </gen-search-widget>
+
+</body>
+</html>
